@@ -26,7 +26,7 @@ public class ParkingController {
         return ResponseEntity.ok(service.parkVehicle(request));
     }
 
-    @PostMapping
+    @PostMapping("/bill")
     public ResponseEntity<ExitVehicleResponse>  exitVehicle(@Valid @RequestBody ExitVehicleRequest request) {
         return ResponseEntity.ok(service.exitVehicle(request));
     }
