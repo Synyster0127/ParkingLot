@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,8 +20,8 @@ public class ParkingService {
 
     private final List<ParkingSpace> spaces;
 
-    public ParkingService(List<ParkingSpace> spaces) {
-        this.spaces = spaces;
+    public ParkingService() {
+        this.spaces = new ArrayList<>();
         for (int i = 1; i <= ParkingConfig.TOTAL_SPACES; i++) {
             this.spaces.add(new ParkingSpace(i));
         }
